@@ -1,0 +1,19 @@
+# AvaTradeApp TODO List
+
+## Features to Implement
+- [ ] Add unit tests for all services and repositories
+- [ ] Implement role-based authorization
+- [ ] Add support for pagination in news endpoints
+- [ ] Improve logging for better error tracking
+- [ ] Add email confirmation during user registration
+
+## Documentation
+- [ ] Writed README.md with project details
+- [ ] Created detailed API documentation
+- [ ] Added example requests and responses for Swagger
+
+## Enhancements
+- [ ] Optimize database queries for news filtering
+- [ ] Refactor large methods in controllers for better readability
+- [ ] Improve exception handling in services
+- [ ] Add caching for frequently accessed endpoints (e.g., latest news)
