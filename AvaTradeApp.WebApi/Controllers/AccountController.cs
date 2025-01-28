@@ -29,8 +29,8 @@ namespace AvaTradeApp.WebApi.Controllers
         /// If registration fails, a 400 BadRequest status is returned with an error message.
         /// </returns>
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequestDto request)
+        [HttpPost("RegisterAsync")]
+        public async Task<IActionResult> RegisterAsync([FromBody] RegisterRequestDto request)
         {
             try
             {
@@ -55,8 +55,8 @@ namespace AvaTradeApp.WebApi.Controllers
         /// If an error occurs during authentication, a 401 Unauthorized status is returned with an error message.
         /// </returns>
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
+        [HttpPost("LoginAsync")]
+        public async Task<IActionResult> LoginAsync([FromBody] LoginRequestDto request)
         {
             try
             {
@@ -83,8 +83,8 @@ namespace AvaTradeApp.WebApi.Controllers
         /// </returns>
 
         [Authorize]
-        [HttpPost("subscribe")]
-        public async Task<IActionResult> Subscribe([FromBody] SubscribeRequestDto request)
+        [HttpPost("SubscribeAsync")]
+        public async Task<IActionResult> SubscribeAsync([FromBody] SubscribeRequestDto request)
         {
             try
             {

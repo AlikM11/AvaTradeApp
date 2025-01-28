@@ -7,10 +7,10 @@ namespace AvaTradeApp.Infrastructure.Services.Interfaces
     /// </summary>
     public interface INewsService
     {
-        Task<IEnumerable<News>> GetLatestNews();
+        Task<IEnumerable<News>> GetLatestNewsAsync();
         Task<IEnumerable<News>> GetAllNewsAsync();
-        Task<IEnumerable<News>> GetAllNewsWithGivingDay(int days);
-        Task<IEnumerable<News>> GetAllNewsPerInstrument(string keyword);
-        Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimit(string keyword, int limit);
+        Task<IEnumerable<News>> GetAllNewsWithGivingDayAsync(int days);
+        Task<IEnumerable<News>> GetAllNewsPerInstrumentAsync(string keyword);
+        Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimitAsync(string keyword, int limit);
     }
 }

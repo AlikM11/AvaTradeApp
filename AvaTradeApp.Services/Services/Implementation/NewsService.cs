@@ -18,23 +18,23 @@ namespace AvaTradeApp.Infrastructure.Services.Implementation
 
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsWithGivingDay(int days)
+        public async Task<IEnumerable<News>> GetAllNewsWithGivingDayAsync(int days)
         {
-            return await _newsRepo.GetAllNewsWithGivingDay(days);
+            return await _newsRepo.GetAllNewsWithGivingDayAsync(days);
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimit(string keyword, int limit = 10)
+        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimitAsync(string keyword, int limit = 10)
         {
-            return await _newsRepo.GetAllNewsPerInstrumentWithLimit(keyword, limit);
+            return await _newsRepo.GetAllNewsPerInstrumentWithLimitAsync(keyword, limit);
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsPerInstrument(string keyword)
+        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentAsync(string keyword)
         {
-            return await _newsRepo.GetAllNewsPerInstrument(keyword);
+            return await _newsRepo.GetAllNewsPerInstrumentAsync(keyword);
         }
-        public async Task<IEnumerable<News>> GetLatestNews()
+        public async Task<IEnumerable<News>> GetLatestNewsAsync()
         {
-            return await _newsRepo.GetLatestNews();
+            return await _newsRepo.GetLatestNewsAsync();
         }
     }
 }

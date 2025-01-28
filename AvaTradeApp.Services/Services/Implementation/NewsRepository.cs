@@ -18,7 +18,7 @@ namespace AvaTradeApp.Infrastructure.Services.Implementation
             return news;
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsWithGivingDay(int days)
+        public async Task<IEnumerable<News>> GetAllNewsWithGivingDayAsync(int days)
         {
             List<News> news = await _context.News
                                     .Where(n => n.Published >= DateTime.Today.AddDays(-days))
@@ -28,7 +28,7 @@ namespace AvaTradeApp.Infrastructure.Services.Implementation
             return news;
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimit(string keyword, int limit)
+        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentWithLimitAsync(string keyword, int limit)
         {
             var lowerKeyword = keyword.ToLower();
 
@@ -42,7 +42,7 @@ namespace AvaTradeApp.Infrastructure.Services.Implementation
                 .Take(limit);
         }
 
-        public async Task<IEnumerable<News>> GetAllNewsPerInstrument(string keyword)
+        public async Task<IEnumerable<News>> GetAllNewsPerInstrumentAsync(string keyword)
         {
             var lowerKeyword = keyword.ToLower();
 
@@ -55,7 +55,7 @@ namespace AvaTradeApp.Infrastructure.Services.Implementation
                 .Where(n => n.Keywords.Any(k => k.ToLower() == lowerKeyword));
         }
 
-        public async Task<IEnumerable<News>> GetLatestNews()
+        public async Task<IEnumerable<News>> GetLatestNewsAsync()
         {
             var news = await _context.News
                 .AsNoTracking()

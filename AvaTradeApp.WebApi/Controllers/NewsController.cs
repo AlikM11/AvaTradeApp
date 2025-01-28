@@ -24,8 +24,8 @@ namespace AvaTradeApp.WebApi.Controllers
         /// </returns>
         
         [Authorize]
-        [HttpGet("GetAllNews")]
-        public async Task<IActionResult> GetAllNews()
+        [HttpGet("GetAllNewsAsync")]
+        public async Task<IActionResult> GetAllNewsAsync()
         {
             var news = await _newsService.GetAllNewsAsync();
             return Ok(news);
@@ -42,10 +42,10 @@ namespace AvaTradeApp.WebApi.Controllers
         /// </returns>
 
         [Authorize]
-        [HttpGet("GetAllNewsWithGivingDay")]
-        public async Task<IActionResult> GetAllNewsWithGivingDay([FromQuery]int day)
+        [HttpGet("GetAllNewsWithGivingDayAsync")]
+        public async Task<IActionResult> GetAllNewsWithGivingDayAsync([FromQuery]int day)
         {
-            var news = await _newsService.GetAllNewsWithGivingDay(day);
+            var news = await _newsService.GetAllNewsWithGivingDayAsync(day);
             return Ok(news);
         }
 
@@ -61,10 +61,10 @@ namespace AvaTradeApp.WebApi.Controllers
         /// </returns>
 
         [Authorize]
-        [HttpGet("GetAllNewsPerInstrumentWithLimit")]
-        public async Task<IActionResult> GetAllNewsPerInstrumentWithLimit([FromQuery] string keyword, [FromQuery] int limit)
+        [HttpGet("GetAllNewsPerInstrumentWithLimitAsync")]
+        public async Task<IActionResult> GetAllNewsPerInstrumentWithLimitAsync([FromQuery] string keyword, [FromQuery] int limit)
         {
-            var news = await _newsService.GetAllNewsPerInstrumentWithLimit(keyword, limit);
+            var news = await _newsService.GetAllNewsPerInstrumentWithLimitAsync(keyword, limit);
             return Ok(news);
         }
 
@@ -79,10 +79,10 @@ namespace AvaTradeApp.WebApi.Controllers
         /// </returns>
 
         [Authorize]
-        [HttpGet("GetAllNewsPerInstrument")]
-        public async Task<IActionResult> GetAllNewsPerInstrument([FromQuery] string keyword)
+        [HttpGet("GetAllNewsPerInstrumentAsync")]
+        public async Task<IActionResult> GetAllNewsPerInstrumentAsync([FromQuery] string keyword)
         {
-            var news = await _newsService.GetAllNewsPerInstrument(keyword);
+            var news = await _newsService.GetAllNewsPerInstrumentAsync(keyword);
             return Ok(news);
         }
 
@@ -95,10 +95,10 @@ namespace AvaTradeApp.WebApi.Controllers
         /// If no news articles are found, an empty list is returned.
         /// </returns>
 
-        [HttpGet("GetLatestNews")]
-        public async Task<IActionResult> GetLatestNews()
+        [HttpGet("GetLatestNewsAsync")]
+        public async Task<IActionResult> GetLatestNewsAsync()
         {
-            var news = await _newsService.GetLatestNews();
+            var news = await _newsService.GetLatestNewsAsync();
             return Ok(news);
         }
     }
